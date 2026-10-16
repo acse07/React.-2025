@@ -22,11 +22,11 @@ export function App() {
   useEffect(() => {
     console.log("effect");
 
-    fetch("https://musicfun.it-incubator.app/api/1.0/playlists/tracks", {
+    fetch("https://musicfun.it-incubator.app/api/1.0/playlists/tracks", import.meta.env.DEV ? {
       headers: {
         "api-key": "8c45d645-4e8d-4f9d-aca4-d832ebd84746",
       },
-    })
+    } : undefined)
       .then((res) => {
         if (!res.ok) {
           throw new Error("Ошибка загрузки треков");
@@ -42,11 +42,11 @@ export function App() {
     if (!selectedTrackId) {
       return;
     }
-    fetch("https://musicfun.it-incubator.app/api/1.0/playlists/tracks/" + selectedTrackId, {
+    fetch("https://musicfun.it-incubator.app/api/1.0/playlists/tracks/" + selectedTrackId, import.meta.env.DEV ? {
       headers: {
         "api-key": "8c45d645-4e8d-4f9d-aca4-d832ebd84746",
       },
-    })
+    } : undefined)
       .then((res) => {
         if (!res.ok) {
           throw new Error("Ошибка загрузки треков");

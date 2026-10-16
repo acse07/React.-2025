@@ -10,6 +10,10 @@ The deployment uses Node.js 24, `npm ci`, and `npm run build`, then publishes `d
 to GitHub Pages. Repository **Settings → Pages → Source** must be **GitHub Actions**.
 The Vite `base` is `/React.-2025/` so assets load under the repository URL.
 
+Musicfun API must also allow the production domain `acse07.github.io` in its API
+settings. The API key is sent only in development; production requests use the
+registered domain without an API key.
+
 ## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
