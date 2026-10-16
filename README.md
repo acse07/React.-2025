@@ -1,4 +1,16 @@
-# React + TypeScript + Vite
+# Musicfun
+
+Live site: [acse07.github.io/React.-2025](https://acse07.github.io/React.-2025/).
+
+Every push to `main` automatically builds and publishes the site with
+[GitHub Actions](https://github.com/acse07/React.-2025/actions/workflows/deploy.yml).
+The workflow can also be started manually from the Actions tab using **Run workflow**.
+
+The deployment uses Node.js 24, `npm ci`, and `npm run build`, then publishes `dist`
+to GitHub Pages. Repository **Settings → Pages → Source** must be **GitHub Actions**.
+The Vite `base` is `/React.-2025/` so assets load under the repository URL.
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
